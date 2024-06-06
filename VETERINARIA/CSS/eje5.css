@@ -1,0 +1,313 @@
+:root{
+    --red:#ec8f04;
+    --black:#252a34;
+    --blue:#ecddd8;
+    --white:#fff;
+    --title:35px;
+    --text:19px;
+ }
+ 
+ *{
+     margin:0;
+     padding: 0;
+     box-sizing: border-box;
+     /* border: solid #252a34; */
+ }
+ body{
+     background: #ffff;
+     overflow-x: hidden;
+     font-family: 'Red Hat Text', sans-serif;
+ }
+ .go-top{
+     position: fixed;
+     bottom: 100px;
+     right: -100%;
+     width: 50px;
+     height: 50px;
+     background: #fff;
+     border:2px solid var(--red);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+     z-index: 1000;
+     transition: 0.5s;
+ }
+ .go-top:hover{
+     background: var(--red);
+     color:#fff;
+     border: 2px solid var(--white);
+ }
+ .go-top:hover span{color:var(--white);}
+ 
+ .go-top > span{
+    font-size: 30px;
+    color: var(--black);
+ }
+ 
+
+ /** Skew **/
+ .skew-abajo{
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     border-width: 0 0 10vh 100vw;
+     border-style: solid;
+     border-color: transparent transparent #fff transparent;
+ }
+ .skew-arriba{
+     position: absolute;
+     top: 0;
+     left: 0;
+     border-width: 10vh 100vw 0 0;
+     border-style: solid;
+     border-color: #fff transparent transparent transparent;
+     z-index: 10;
+ }
+
+/* Encabezado */
+#header {
+    width: 100%;
+}
+
+.menu .list-container ul li a.active{
+    background: var(--red);
+    color:#fff;
+}
+
+
+ .menu .list-container ul li a.hover{
+     background: var(--red);
+     color:#fff;
+ }
+ 
+ .btn-menu > .fa-bars{
+     display: none;
+ }
+ 
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+.logo-box {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+.logo-box h1 a {
+    text-decoration: none;
+    font-size: 35px;
+    color: var(--black);
+}
+.logo-img {
+    width: 50px;
+    height: auto;
+    margin-left: 15px;
+}
+
+.list-container {
+    margin-right: 20px;
+}
+.list-container ul {
+    display: flex;
+}
+.list-container ul li {
+    list-style: none;
+}
+.list-container ul li a {
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px;
+    color: var(--black);
+    border-radius: 24px;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+/* Imagen de cabecera */
+.img-header {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/fondo4.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.img-header .welcome {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.img-header .welcome h1 {
+    font-size: 80px;
+    color: #fff;
+}
+.img-header .welcome hr {
+    width: 400px;
+    background: #fff;
+}
+.img-header .welcome p {
+    font-size: 30px;
+    color: #fff;
+}
+.img-header .welcome > button {
+    width: 220px;
+    height: 60px;
+    background: var(--red);
+    border-radius: 24px;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.img-header .welcome > button:hover {
+    background: var(--blue);
+}
+
+/* Estilos responsivos */
+@media only screen and (max-width: 900px) {
+    .btn-menu > .fa-bars {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        font-size: 28px;
+        color: var(--black);
+        cursor: pointer;
+    }
+    .menu .list-container {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        background: #fff;
+        width: 100%;
+        height: calc(100vh - 60px);
+    }
+    .menu .list-container ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu .list-container ul li {
+        width: 90%;
+        text-align: center;
+    }
+    .menu .list-container ul li a {
+        font-size: 20px;
+        padding: 12px 0;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .img-header .welcome h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    .img-header .welcome hr {
+        width: 100px;
+    }
+    .img-header .welcome p {
+        font-size: 17px;
+    }
+    .img-header .welcome > button {
+        width: 100px;
+        font-size: 17px;
+    }
+}
+
+/* Sección de ubicación y mapa */
+#map {
+    height: 600px; /* Altura del mapa */
+    width: 100%;
+}
+
+/* Efecto de giro en la imagen */
+.info-imagen {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 20px auto; /* Centra la imagen y añade margen */
+}
+
+.info-imagen img, .info-imagen .info-hover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+
+.info-imagen img {
+    z-index: 2;
+}
+
+.info-imagen .info-hover {
+    background: var(--red);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: rotateY(180deg);
+    z-index: 1;
+    bottom: 0; /* Coloca la info abajo */
+    flex-direction: column; /* Alinea el texto en columna */
+    padding: 5px; /* Añade espacio entre el texto y el borde */
+}
+
+.info-imagen .info-hover h2 {
+    margin-bottom: 10px; /* Ajusta el espacio entre el título y el texto */
+}
+
+.info-imagen:hover img {
+    transform: rotateY(180deg);
+}
+
+.info-imagen:hover .info-hover {
+    transform: rotateY(0deg);
+}
+
+
+/* Pie de página */
+.footer-text {
+    background-color: var(--red);
+    padding: 1px 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px; /* Espacio entre el mapa y el pie de página */
+}
+
+main > section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+main > section h2 {
+    margin-bottom: 20px;
+}
+
+
+/* Centrar los títulos */
+.blog-post h2 {
+    text-align: center;
+}
+
+/* Asegúrate de que el contenedor del mapa tenga una altura definida */
+#map {
+    height: 600px;
+    width: 100%;
+}

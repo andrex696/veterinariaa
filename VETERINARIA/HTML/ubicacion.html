@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Comida Canina</title>
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../CSS/eje5.css">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+</div>
+</head>
+<body>
+    <!-- Ir Arriba -->
+    <div class="go-top">
+        <span class="fas fa-angle-up"></span>
+    </div>
+
+    <!-- Menu de Navegacion -->
+    <header id="header">
+        <nav class="menu">
+            <div class="logo-box">
+                <h1><a href="#">Comida Canina</a></h1>
+                <a href="#"><img src="../img/logo.png" alt="Logo" class="logo-img"></a>
+                <span class="btn-menu"><i class="fas fa-bars"></i></span>
+            </div>
+
+            <div class="list-container">
+                <ul class="lists">
+                    <li><a id="inicio" href="./index.html">Inicio</a></li>
+                    <li><a id="blog" href="./blog.html">Blog</a></li>
+                    <li><a id="carrito" href="./indexx.html">Carrito</a></li>
+                    <li><a id="contacto" href="./contacto.html">Contacto</a></li>
+                    <li><a id="ubicacion" href="ubicacion.html" class="active">Ubicación</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Interfaz -->
+        <div class="img-header">
+            <div class="welcome">
+                <h1>Ubicacion</h1>
+                <hr>
+                <p>Comida Canina</p>
+                <h2>ㅤ</h2>
+                <button id="abajo">Ver</button>
+            </div>
+        </div>
+
+        <div class="skew-abajo"></div>
+    </header>
+    
+    <div class="skew-abajo"></div>
+
+    <main class="blog-post">
+        <article>
+            <h2>ㅤ</h2>
+            <h2>Estamos ubicados:</h2>
+            <div class="info-imagen">
+                <img src="../img/venta.jpg" alt="Alimenta A Tus Mascotas" />
+                <div class="info-hover">
+                    <h3>Comida Canina</h3>
+                    <p>ㅤ</p>
+                    <p>LOCALiDAD DE CHAPINERO: Carrera 13 No. 54 - 74 Lunes a Viernes de 7:00 a.m. a 4:30 p.m</p>
+                </div>
+            </div>
+        </article>
+        <section id="Encuentranos En El Mapa">
+            <h2>Encuentranos en el Mapa:</h2>
+            <div id="map"></div>
+        </section>
+    </main>
+    <div class="footer-text">
+        <p>&copy; Miguel Garcia - 2024 | Todos los derechos reservados.</p>
+    </div>
+    <script>
+        function initMap() {
+            const minLat = -90;
+            const maxLat = 90;
+            const minLng = -180;
+            const maxLng = 180;
+            const ubicacion = {
+                lat: Math.random() * (maxLat - minLat) + minLat,
+                lng: Math.random() * (maxLng - minLng) + minLng,
+            };
+            const mapa = new google.maps.Map(document.getElementById("map"), {
+                center: ubicacion,
+                zoom: 15,
+            });
+            const marcador = new google.maps.Marker({
+                position: ubicacion,
+                map: mapa,
+                title: "Ubicación Aleatoria",
+            });
+        }
+    </script>
+    <script src="../JS/app.js"></script>
+    <script src="../JS/ubicacion.js"></script>
+    <script src="https://kit.fontawesome.com/35db202371.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=initMap" async defer></script>
+</body>
+</html>

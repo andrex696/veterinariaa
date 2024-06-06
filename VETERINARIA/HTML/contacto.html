@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Comida Canina</title>
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../CSS/eje4.css">
+    <link rel="stylesheet" href="../CSS/contac.css">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Ir Arriba -->
+    <div class="go-top">
+        <span class="fas fa-angle-up"></span>
+    </div>
+
+    <!-- Menu de Navegacion -->
+    <header id="header">
+        <nav class="menu">
+            <div class="logo-box">
+                <h1><a href="#">Comida Canina</a></h1>
+                <a href="#"><img src="../img/logo.png" alt="Logo" class="logo-img"></a>
+                <span class="btn-menu"><i class="fas fa-bars"></i></span>
+            </div>
+    <!-- Menu -->
+            <div class="list-container">
+                <ul class="lists">
+                    <li><a id="inicio" href="./index.html" >Inicio</a></li>
+                    <li><a id="blog" href="./blog.html">Blog</a></li>
+                    <li><a id="carrito" href="./indexx.html">Carrito</a></li>
+                    <li><a id="contacto" href="./contacto.html" class="active">Contacto</a></li>
+                    <li><a id="ubicacion" href="ubicacion.html">Ubicación</a></li>
+                </ul>
+                
+            </div>
+        </nav>
+
+        <!-- Interfaz -->
+        <div class="img-header">
+            <div class="welcome">
+                <h1>Contactanos</h1>
+                <hr>
+                <p>Comida Canina</p>
+                <button id="abajo">Rellenar</button>
+            </div>
+        </div>
+
+        <div class="skew-abajo"></div>
+    </header>
+    
+    <div class="skew-abajo"></div>
+
+    <main class="blog-post">
+        <article>
+            <h2>Formulario de Contacto</h2>
+            <h2>ㅤ</h2>
+            <div class="formulario-content">
+                <form id="formulario">
+                    <label for="user">Nombre:</label>
+                    <input type="text" id="user" name="user" placeholder="Ingresa tu Nombre">
+                
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu Correo Electrónico">
+                    
+                    <label for="message">Escribe tu mensaje:</label>
+                    <textarea name="message" id="message" placeholder="Dejanos tu mensaje aquí"></textarea>
+                    
+                    <button class="send" type="button" onclick="enviar()">Enviar</button>
+                </form>
+                <div class="mensaje-form">
+                    <p>Dejanos tu mensaje con gusto y tendrás una respuesta de parte de nosotros en muy poco tiempo.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <div class="footer-text" style="background-color: #ec8f04;">
+        <p>&copy; Miguel Garcia - 2024 | Todos los derechos reservados.</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/35db202371.js"></script>
+    <script src="../JS/app.js"></script>
+    <!-- SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        function enviar() {
+            swal("¡GRACIAS POR CONTACTARTE!", "¡Buen día!", "success");
+            document.getElementById("formulario").reset(); // Restablece el formulario
+        }
+    </script>
+</body>
+</html>

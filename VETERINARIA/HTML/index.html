@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Comida Canina</title>
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Estilos Css -->
+    <link rel="stylesheet" href="../CSS/eje.css">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Ir Arriba -->
+    <div class="go-top">
+        <span class="fas fa-angle-up"></span>
+    </div>
+
+    <!-- Menu de Navegacion -->
+    <header id="header">
+        <nav class="menu">
+            <div class="logo-box">
+                <h1><a href="#">Comida Canina</a></h1>
+                <a href="#"><img src="../img/logo.png" alt="Logo" class="logo-img" ></a>
+                <span class="btn-menu"><i class="fas fa-bars"></i></span>
+            </div>
+
+            <div class="list-container">
+              <ul class="lists">
+                <li><a id="inicio" href="./index.html" class="active">Inicio</a></li>
+                <li><a id="blog" href="./blog.html">Blog</a></li>
+                <li><a id="carrito" href="./indexx.html">Carrito</a></li>
+                <li><a id="contacto" href="./contacto.html">Contacto</a></li>
+                <li><a id="ubicacion" href="ubicacion.html">Ubicación</a></li>
+            </ul>
+            </div>
+        </nav>
+
+        <!-- Imagen Header -->
+        <div class="img-header">
+            <div class="welcome">
+                <h1>Bienvenidos a</h1>
+                <h1>Comida Canina</h1>
+                <hr>
+                <p>Tienda de comida animal</p>
+                <button id="abajo">Ver abajo</button>
+            </div>
+        </div>
+
+        <div class="skew-abajo"></div>
+    </header>
+    
+    <div class="skew-abajo"></div>
+
+<main>
+
+    <!-- Acerca de nosotros -->
+    <section class="acerca-de">
+    <div class="info-container" id="acerca">
+      <h1>Acerca de Nosotros</h1>
+      <p>En Comida Canina, nos enorgullece ofrecer una amplia variedad de alimentos de alta calidad para tus queridas mascotas. Nos especializamos en proporcionar productos nutritivos y saludables, adaptados a las necesidades específicas de cada tipo de animal.</p>
+      <p>Para los perros y gatos, disponemos de una extensa gama de comidas que aseguran una dieta balanceada y deliciosa. Nuestras opciones para aves y peces están cuidadosamente seleccionadas para promover su bienestar y vitalidad.</p>
+      <div class="about-gallery">
+        <img class="img1" src="../img/comiendo2.jpg" alt="">
+        <img class="img2" src="../img/comiendo3.webp" alt="">
+        <img class="img3" src="../img/comiendo1.jpg" alt="">
+      </div>
+      <div class="about-more"><button id="ja">👇🏻</button></div>
+      
+    </div>
+    </section>
+
+  <section class="our-projects">
+      <div class="skew-arriba"></div>
+  <div class="deg-background"></div>
+  
+  <div class="ejeZproject">
+      <div class="container-project">
+        <div class="project-title">
+          <h2>Algunos Alimentos</h2>
+          <hr>
+        </div>
+          <div class="project-img">
+            <img src="../img/comida aves.jpg" alt="">
+            <img src="../img/comida peces.jpg" alt="">
+            <img src="../img/comida gatos.jpg" alt="">
+            <img src="../img/comida conejos.jpg" alt="">
+            <img src="../img/comida perros.jpg" alt="">
+        </div>
+    
+  <div class="skew-abajo"></div>
+  </section>
+
+      <!-- video -->
+      <section class="testimonios">
+        <div class="testimonios-title">
+        <h2>Un poco más</h2>
+        <hr>
+        </div>
+
+        <section>
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6" style="padding-bottom: 100px;">
+                    <div class="col-md-6" style="padding-top: 20px;"></div>
+                    <iframe width="1200" height="500" src="https://www.youtube.com/embed/1aVMNFsksM8?si=DW2GDYbREbwXp3Yx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+      </section>
+      
+
+  <div class="footer-text" style="background-color: #ff9b06;">
+    <p>&copy; Miguel Garcia - 2024 | Todos los derechos reservados.</p>
+  </div>
+  
+  </div>
+</div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://kit.fontawesome.com/35db202371.js"></script>
+<script src="../JS/app.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const menuItems = document.querySelectorAll('.menu .list-container ul li a');
+      menuItems.forEach(item => {
+          item.addEventListener('click', function() {
+              // Remove 'active' class from all menu items
+              menuItems.forEach(link => link.classList.remove('active'));
+              // Add 'active' class to the clicked item
+              this.classList.add('active');
+          });
+      });
+  });
+</script>
+
+
+</body>
+</html>
